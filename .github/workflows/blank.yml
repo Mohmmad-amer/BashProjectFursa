@@ -1,0 +1,27 @@
+name: Project auto-testing
+on:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+jobs:
+  BashProjectTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout Test files
+        uses: actions/checkout@v2
+        with:
+          repository: alonitac/BashProjectFursa
+          ref: main
+          path: BashProjectOriginal
+      - name: Copy test files
+        run: |
+          mv -f BashProjectOriginal/test/* test/
+          rm -f -r BashProjectOriginal
+
+      - name: Bash project test
+        run: | 
+          sudo bash test/test.sh

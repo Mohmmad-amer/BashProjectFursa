@@ -1,5 +1,7 @@
 # your solution here...
 #!/bin/bash
+
+#make new env var
 COURSE_ID=DevOpsFursa
 
 echo Hello $USER
@@ -16,17 +18,15 @@ fi
 
 # Change the Umask to 117 for premssion rw only for user and group
 umask 117
-umask -S
 
 # add /home/user/command to the PATH var
 PATH=$PATH:/home/$USER/usercommands
-echo $PATH
 
 # PRINT THE data with the current date
 CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%:z")
 echo the current data is: $CURRENT_DATE
 
-alias ltxt='ls .*txt'
+alias ltxt='ls *txt'
 
 tmp_dir="$HOME/tmp"
 

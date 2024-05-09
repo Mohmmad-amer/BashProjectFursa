@@ -3,7 +3,6 @@
 COURSE_ID=DevOpsFursa
 
 echo Hello $USER
-echo $COURSE_ID
 
 if [ -e ~/.token ]; then
     # Get the octal representation of the file permissions

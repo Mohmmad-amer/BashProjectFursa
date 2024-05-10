@@ -1,4 +1,3 @@
-# your solution here...
 #!/bin/bash
 
 #make new env var
@@ -18,7 +17,7 @@ if [ -e ~/.token ]; then
 fi
 
 # Change the Umask to 117 for premssion rw only for user and group
-umask 0006
+export umask 0006
 
 # add /home/user/command to the PATH var
 PATH=$PATH:/home/$USER/usercommands

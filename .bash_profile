@@ -2,7 +2,7 @@
 #!/bin/bash
 
 #make new env var
-COURSE_ID=DevOpsFursa
+export COURSE_ID=DevOpsFursa
 
 echo Hello $USER
 

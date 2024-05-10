@@ -18,7 +18,7 @@ if [ -e ~/.token ]; then
 fi
 
 # Change the Umask to 117 for premssion rw only for user and group
-umask 117
+umask 0006
 
 # add /home/user/command to the PATH var
 PATH=$PATH:/home/$USER/usercommands

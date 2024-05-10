@@ -4,6 +4,7 @@
 #make new env var
 export COURSE_ID=DevOpsFursa
 
+
 echo Hello $USER
 
 if [ -e ~/.token ]; then

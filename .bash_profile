@@ -16,7 +16,7 @@ if [ -e ~/.token ]; then
     fi
 fi
 
-# Change the Umask to 0006 for premsion rw only for user and group
+# Change the Umask to 0006 for permission rw only for user and group
 umask 0006
 
 # add /home/user/command to the PATH var
@@ -26,7 +26,9 @@ PATH=$PATH:/home/$USER/usercommands
 CURRENT_DATE=$(date -u +"%Y-%m-%dT%H:%M:%S%:z")
 echo the current data is: $CURRENT_DATE
 
+# make new shortcut command for ls *txt
 alias ltxt='ls *txt'
+
 
 tmp_dir="$HOME/tmp"
 
